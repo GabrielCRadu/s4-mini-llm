@@ -20,6 +20,15 @@ Doar `C` este antrenat: `C = T*pinv(H)`, unde `H` are pe coloane memoria finala 
 Vocabular: Marcel, Alina, George, schimba, repara, monteaza, modul, PLC, motorul, HMI.
 Propozitii de antrenare: `Marcel schimba -> PLC`, `Alina repara -> motorul`, `George monteaza -> HMI`.
 
+## Rezultate
+
+| Propozitie | Raspuns | Procent |
+|---|---|---|
+| Marcel schimba | PLC | 54% |
+| Alina repara | motorul | 43% |
+| George monteaza | HMI | 39% |
+| Marcel repara (neantrenata) | PLC | 65% |
+
 ## Structura
 
     matlab/antrenare.m     calculeaza H si C (antrenarea) si testeaza cele 3 propozitii
@@ -33,7 +42,7 @@ MATLAB: in folderul `matlab`, in Command Window:
 
 Afiseaza `H`, `C`, rezultatul pe cele 3 propozitii si valorile `B` si `C` in formatul din `s4_basic.c`.
 
-C (orice calculator cu gcc, de exemplu Raspberry Pi):
+C - compilare:
 
     gcc -o s4_basic s4_basic.c -lm
     ./s4_basic 0 3
