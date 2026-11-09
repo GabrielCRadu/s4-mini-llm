@@ -39,18 +39,3 @@ C (orice calculator cu gcc, de exemplu Raspberry Pi):
     ./s4_basic 0 3
 
 Argumentele sunt indicii cuvintelor: 0 Marcel, 1 Alina, 2 George, 3 schimba, 4 repara, 5 monteaza.
-
-## Rezultate
-
-| Propozitie | Raspuns | Procent |
-|---|---|---|
-| Marcel schimba | PLC | 54% |
-| Alina repara | motorul | 43% |
-| George monteaza | HMI | 39% |
-| Marcel repara (neantrenata) | PLC | 65% |
-
-Valorile din `s4_basic.c` sunt cele din MATLAB (`rng(1)`), rotunjite la 4 zecimale.
-
-## In lucru
-
-- Varianta in C care citeste modelul dintr-un `model.h` generat din MATLAB (exportul A, B, C). A rulat deja pe Raspberry Pi 3B, dar nu face parte din aceasta versiune.
