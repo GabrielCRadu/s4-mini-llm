@@ -31,12 +31,13 @@ Propozitii de antrenare: `Marcel schimba -> PLC`, `Alina repara -> motorul`, `Ge
 
 ## Structura
 
-    matlab/antrenare.m     calculeaza H si C (antrenarea) si testeaza cele 3 propozitii
-    c/s4_basic.c           rularea modelului in C, cu valorile antrenate puse in cod
+    antrenare.m     calculeaza H si C (antrenarea) si testeaza cele 3 propozitii
+    s4_basic.c      rularea modelului in C, cu valorile antrenate puse in cod
+    v2/             versiunea 2: 39 de cuvinte, continua propozitii, ruleaza pe ESP32 (vezi v2/README.md)
 
 ## Rulare
 
-MATLAB: in folderul `matlab`, in Command Window:
+MATLAB: in folderul proiectului, in Command Window:
 
     antrenare
 

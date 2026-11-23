@@ -1,0 +1,17 @@
+# compilate
+s4_basic
+*.exe
+*.o
+# matlab / simulink
+*.asv
+*.autosave
+*.slxc
+slprj/
+# generat de varianta in lucru (model.h din MATLAB)
+model.h
+.vscode/
+build/
+# modelele antrenate din v2 trebuie sa fie in repo
+!v2/**/model.h
+# notite personale (contin IP-uri)
+copiat.txt
