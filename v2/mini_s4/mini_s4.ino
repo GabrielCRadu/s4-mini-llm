@@ -4,9 +4,11 @@
 
 #include "model.h"
 
+const int MAX_CUV = 12;   // propozitia are cel mult 12 cuvinte
+
 float x[N];      // memoria
 float p[V];      // procentul fiecarui cuvant (sa fie urmatorul)
-int prop[12];    // propozitia, ca indici in vocab
+int prop[MAX_CUV];   // propozitia, ca indici in vocab
 int nr = 0;      // cate cuvinte are propozitia
 
 // cauta cuvantul in vocabular, -1 daca nu exista
@@ -66,7 +68,7 @@ void loop() {
   // 1. memoria porneste goala, apoi citim cuvintele pe rand
   for (int n = 0; n < N; n++) x[n] = 0;
   nr = 0;
-  for (char *cuv = strtok(text, " \r"); cuv != NULL && nr < 12; cuv = strtok(NULL, " \r")) {
+  for (char *cuv = strtok(text, " \r"); cuv != NULL && nr < MAX_CUV; cuv = strtok(NULL, " \r")) {
     int w = cauta(cuv);
     if (w < 0) {
       Serial.printf("Nu stiu cuvantul \"%s\"\n", cuv);
@@ -90,7 +92,7 @@ void loop() {
   Serial.println();
 
   // 3. modelul termina propozitia singur, cuvant cu cuvant, pana la "."
-  while (strcmp(vocab[prop[nr - 1]], ".") != 0 && nr < 12) {
+  while (strcmp(vocab[prop[nr - 1]], ".") != 0 && nr < MAX_CUV) {
     prezice();
     citeste(alege());
   }

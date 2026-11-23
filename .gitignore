@@ -15,3 +15,6 @@ build/
 !v2/**/model.h
 # notite personale (contin IP-uri)
 copiat.txt
+# parola WiFi (se face din secrete_exemplu.h)
+secrete.h
+

@@ -28,8 +28,8 @@ Pentru alte propozitii, le schimbi in `antrenare_v2.m` si rulezi din nou.
 
 ## Ca server Ollama
 
-In `mini_s4_api.ino` pui numele si parola WiFi (2.4 GHz), Upload. Serial Monitor arata adresa, de exemplu `http://192.168.1.50:11434`. Pe aceasta adresa o pui in interfata de chat la "Ollama URL" si alegi modelul `mini-s4`.
+In folderul `mini_s4_api` copiezi `secrete_exemplu.h` ca `secrete.h` si scrii acolo numele si parola WiFi (2.4 GHz). `secrete.h` e ignorat de git, deci parola nu ajunge pe GitHub. Apoi Upload. Serial Monitor arata adresa, de exemplu `http://192.168.1.50:11434`. Pe aceasta adresa o pui in interfata de chat la "Ollama URL" si alegi modelul `mini-s4`.
 
 Test din PowerShell:
 
-    curl.exe http://192.168.1.50:11434/api/chat -d '{\"messages\":[{\"role\":\"user\",\"content\":\"Marcel repara\"}],\"stream\":false}'
+    curl.exe http://192.168.1.50:11434/api/chat -H "Content-Type: application/json" -d '{"messages":[{"role":"user","content":"Marcel repara"}],"stream":false}'
