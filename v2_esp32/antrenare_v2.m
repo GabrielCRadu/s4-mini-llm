@@ -1,5 +1,5 @@
 % antrenare_v2: mini-S4 mai mare, care continua propozitii
-% rulare: din folderul v2, scrie "antrenare_v2" in Command Window
+% rulare: din folderul v2_esp32, scrie "antrenare_v2" in Command Window
 % la final scrie mini_s4/model.h, folosit de programul de pe ESP32
 clear; clc;
 

@@ -11,8 +11,8 @@ slprj/
 model.h
 .vscode/
 build/
-# modelele antrenate din v2 trebuie sa fie in repo
-!v2/**/model.h
+# modelele antrenate din v2_esp32 trebuie sa fie in repo
+!v2_esp32/**/model.h
 # notite personale (contin IP-uri)
 copiat.txt
 # parola WiFi (se face din secrete_exemplu.h)
